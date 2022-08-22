@@ -1,19 +1,17 @@
-
-#banner {
-   
-    background-image: url(images/);
-    color: black;
-    display: flex;
-    width: 1400px;
-    height: 300px;
-    align-items: center;
-    padding-top: 10px;
-}
-
 h1 {
     font-family: 'Sansita Swashed', cursive;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+#banner {
+    background-image: url(images/bg-2.jpg);
+    color: white;
+    display: flex;
+    width: 1400px;
+    height: 300px;
+    align-items: center;
+    padding-top: 10px;
 }

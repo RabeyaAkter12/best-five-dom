@@ -85,7 +85,43 @@ document
         disableButton('player-six-btn');
     });
 
+// data into text field
+function insertIntoTextField(inputId, data) {
+    document.getElementById(inputId).innerText = data;
+}
 
+//data from input field
+function getDataFromInputField(inputId) {
+    return parseInt(document.getElementById(inputId).value);
+}
+
+document.getElementById('calculate-btn').addEventListener('click', function () {
+    //  data for each player
+    const costPerPlayer = getDataFromInputField('player-cost');
+
+    // enables dollar 
+    document.getElementById('player-ex').style.display = 'inline';
+
+    //  total cost players
+    insertIntoTextField('player-expense', costPerPlayer * count);
+});
+
+
+document
+    .getElementById('calculate-total-btn')
+    .addEventListener('click', function () {
+        const costPerPlayer = parseInt(
+            document.getElementById('player-expense').innerText
+        );
+        const managerCost = getDataFromInputField('manager-cost');
+        const coachCost = getDataFromInputField('coach-cost');
+
+        const totalCost = costPerPlayer + managerCost + coachCost;
+
+        document.getElementById('total-ex').style.display = 'inline';
+
+        insertIntoTextField('total-expense', totalCost);
+    });
 
 
 
